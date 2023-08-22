@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;1,300&display=swap');
+
 :root {
     --navy      : #001B48;
     --blue      : #174AE4;
@@ -49,6 +51,8 @@
 body {
     margin    : 0;
     background: var(--bg);
+    font-family: 'Poppins',
+        sans-serif;
 }
 
 body::before {
@@ -56,9 +60,9 @@ body::before {
     position: fixed;
 }
 
-/* style item */
+/* start style item */
 h1 {
-    font-weight: 400;
+    font-weight: 800;
     line-height: 1.2;
     color      : var(--blue);
 }
@@ -76,6 +80,7 @@ p {
 form {
     background   : var(--white);
     padding      : 2.5rem 0.625rem;
+    margin-bottom: 2.5rem;
     border-radius: 1rem;
     box-shadow   : var(--shadow);
 }
@@ -87,15 +92,24 @@ label {
     margin-bottom: 0.5rem;
 }
 
-input {
+input,
+button,
+select,
+textarea {
     margin     : 0;
     font-family: inherit;
     font-size  : inherit;
     line-height: inherit;
 }
 
-/* style item */
-/* style class */
+button {
+    border: none;
+}
+
+/* end style item */
+
+
+/* start style class */
 .container {
     width : 100%;
     margin: 3.225rem auto 0 auto;
@@ -138,9 +152,52 @@ input {
     outline     : 0;
 }
 
-/* style class */
+.radio-inline,
+.checkbox-inline {
+    display     : inline-block;
+    margin-right: 0.625rem;
+    min-width   : 1.25rem;
+    min-height  : 1.25rem;
+}
 
-/* style media query */
+.textarea-inline {
+    min-height      : 120px;
+    width           : 100%;
+    padding         : 0.625rem;
+    resize          : vertical;
+    border-radius   : 0.25rem;
+    border          : 0;
+    background-color: var(--softgrey);
+    box-shadow      : var(--shadowbox);
+}
+
+.textarea-inline:focus {
+    border-color: var(--bt-primary);
+    box-shadow  : var(--shadow);
+    outline     : 0;
+    transition  : border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+
+.item-center {
+    padding: 0 0.625rem;
+    display: flex;
+}
+
+.submit-button {
+    display      : block;
+    width        : 139px;
+    border-radius: 0.25rem;
+    height       : 48px;
+    background   : var(--bt-primary);
+    color        : var(--white);
+    font-size    : 18px;
+
+}
+
+/* end style class */
+
+/* start style media query */
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
@@ -159,4 +216,4 @@ input {
     }
 }
 
-/* style media query */
+/* end style media query */
