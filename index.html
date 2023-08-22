@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Programming Survey</title>
     <!-- css -->
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <!-- css -->
 
     <!-- font -->
@@ -21,8 +21,10 @@
         </p>
       </header>
       <!-- header -->
+
       <!--form survey -->
       <form action="" id="survey-form">
+        <!--start form-control -->
         <div class="form-group">
           <label for="name" id="name-label">Name</label>
           <input
@@ -58,6 +60,9 @@
             placeholder="Enter your age"
           />
         </div>
+        <!--end form-control -->
+
+        <!--start form-dropdown -->
         <div class="form-group">
           <label for="dropdown" id="dropdown-label"
             >Select a programming language</label
@@ -65,10 +70,140 @@
           <select class="form-control" name="dropdown" id="dropdown" required>
             <option disabled selected value>Select programming language</option>
             <option value="java">Java</option>
+            <option value="python">Python</option>
+            <option value="javascript">Java Script</option>
+            <option value="csharp">C#</option>
           </select>
         </div>
+        <!-- end form-dropdown -->
+
+        <!-- start form-radio -->
+        <div class="form-group">
+          <p>Preferred Programming Paradigm</p>
+          <label for="oop"
+            ><input
+              id="oop"
+              type="radio"
+              class="radio-inline"
+              name="paradigm"
+              value="oop"
+              checked
+            />
+            Object Oriented Programing</label
+          >
+          <label for="fp"
+            ><input
+              id="fp"
+              type="radio"
+              class="radio-inline"
+              name="paradigm"
+              value="fp"
+            />
+            Functional Programming</label
+          >
+          <label for="pp"
+            ><input
+              id="pp"
+              type="radio"
+              class="radio-inline"
+              name="paradigm"
+              value="pp"
+            />
+            Procedural Paradigm</label
+          >
+        </div>
+        <!-- end form-radio -->
+
+        <!-- start form-dropdown -->
+        <div class="form-group">
+          <label for="dropdown" id="dropdown-label"
+            >Programming language you wanna be expert</label
+          >
+          <select class="form-control" name="dropdown" id="dropdown" required>
+            <option disabled selected value>Select language</option>
+            <option value="C">C (Programming Language)</option>
+            <option value="Python">Python</option>
+            <option value="C#">C#</option>
+            <option value="php">PHP</option>
+            <option value="Js">Java Script</option>
+            <option value="Go">Go (Programming Language)</option>
+            <option value="ruby">Ruby on rails</option>
+            <option value="C++">C++</option>
+            <option value="Java">Java</option>
+          </select>
+        </div>
+        <!-- end form-dropdown -->
+
+        <!-- start form-checkbox -->
+        <div class="form-group">
+          <p>Latest technology experience</p>
+          <label
+            ><input
+              name="tech1"
+              value="flutter"
+              type="checkbox"
+              class="checkbox-inline"
+            />Flutter UI</label
+          >
+          <label
+            ><input
+              name="tech2"
+              value="nodejs"
+              type="checkbox"
+              class="checkbox-inline"
+            />Node.js</label
+          >
+          <label
+            ><input
+              name="tech3"
+              value="tnflow"
+              type="checkbox"
+              class="checkbox-inline"
+            />Tensorflow</label
+          >
+          <label
+            ><input
+              name="tech4"
+              value="git"
+              type="checkbox"
+              class="checkbox-inline"
+            />Github</label
+          >
+          <label
+            ><input
+              name="tech5"
+              value="devops"
+              type="checkbox"
+              class="checkbox-inline"
+            />Dev-Ops</label
+          >
+        </div>
+        <!-- end form-checkbox -->
+
+        <!-- start form-textarea -->
+        <div class="form-group">
+          <p>Do you have any suggestion about this survey?</p>
+          <textarea
+            name="comment"
+            id="comments"
+            class="textarea-inline"
+            placeholder="Enter your comment here.."
+          ></textarea>
+        </div>
+        <!-- end form-textarea -->
+
+        <!-- start btn-submit center -->
+        <div class="container item-center">
+          <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">
+              Submit
+            </button>
+          </div>
+        </div>
+        <!-- end btn-submit center -->
       </form>
       <!--form survey -->
     </div>
   </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
